@@ -1,22 +1,30 @@
 pipeline {
     agent any
     stages {
-        stage("checkout") {
+        stage("Checkout") {
             steps {
                 checkout scm
             }
         }
+
         stage("Test") {
             steps {
                 script {
-                    sh 'sudo apt update -y && sudo apt install npm -y'
+                    // Install npm
+                    sh 'sudo apt update'
+                    sh 'sudo apt install npm -y'
+                    // Run npm test
                     sh 'npm test'
                 }
             }
-        }        
+        }
+
         stage("Build") {
             steps {
-                sh 'npm run build'
+                script {
+                    // Run npm build
+                    sh 'npm run build'
+                }
             }
         }
     }
