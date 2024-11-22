@@ -6,7 +6,7 @@ Deployment of App on docker using jenkins pipeline and pushing the image to dock
 
 1.clone this public get repository in your jenkins server
 ```bash
-git clone https://github.com/Dev-Sai-Ops/Student-jenkins-pipeline-Project.git
+git clone https://github.com/DevVishalOps/Student-jenkins-pipeline-Project.git
 #this is groovy script repository 
 ```
 
